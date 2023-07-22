@@ -26,4 +26,5 @@ RUN pip3 install ansible
 RUN mkdir -p /etc/ansible
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
+VOLUME ["/sys/fs/cgroup"]
 CMD ["/bin/bash"]
